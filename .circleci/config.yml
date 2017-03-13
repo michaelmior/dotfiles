@@ -1,0 +1,17 @@
+version: 2
+
+jobs:
+  build:
+    machine:
+      services:
+        - docker
+    
+    dependencies:
+      cache_directories:
+        - "~/docker"
+    
+      override:
+        - docker info
+        - if [[ -e ~/docker/image.tar ]]; then docker load -i ~/docker/image.tar; fi
+        - docker build --rm=false -t michaelmior/dotfiles .
+        - mkdir -p ~/docker; docker save circleci/elasticsearch > ~/docker/image.tar
