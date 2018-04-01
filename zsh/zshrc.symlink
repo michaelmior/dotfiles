@@ -127,3 +127,10 @@ if [[ -a ~/.localrc ]]
 then
     source ~/.localrc
 fi
+
+# Skip all this for non-interactive shells
+[[ -z "$PS1" ]] && return
+
+echo -en "\n Tip: "
+shuf -n1 $HOME/.dotfiles/tips.txt
+echo

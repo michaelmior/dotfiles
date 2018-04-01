@@ -1,0 +1,30 @@
+,jt will prettify JSON in the current buffer
+F8 shows and hides the tag bar
+Try using rg instead of ag for faster search
+Try using fd instead of find for faster search
+Use C-F to jump to functions defined in the current buffer
+Start a search with g/ to stay in the current position
+Use gl and gh to swap words either right or left
+w!! will write the current buffer using sudo
+gy and gp will copy paste from the clipboard
+wd will give the package name corresponding to a binary
+vman opens man pages in vim with syntax highlighting
+pcd will change to the directory of an installed Python package
+:A will switch between .c and .h files
+:AnsiEsc enables intrepretation of ANSI escape codes
+C-E will autocomplete HTML using Emmet, e.g. html:5
+gf in a Gemfile will go to the gem directory
+Fugitive provides git commands within vim, prefixed with :G
+cs)] will change the style of brackets surrounding the current text
+ysiw<em> will wrap the current word in an <em> tag
+,ww will mark a window and then entering it again swaps the two
+xsv is a useful CLI utility for dealing with CSV files
+hyperfine can be used to benchmark shell commands
+pxl displays images in the terminal
+wuzz is an interactive HTTP client
+pup makes it easy to filter HTML
+tag wraps ag or rg to enable quick jumps into an editor
+tokei enables fast counting of lines of source code
+fkill interactively searches for processes to kill
+glip= will align text in the current paragraph around the = sign
+1gLip, aligns everything after the first , in a separate column
