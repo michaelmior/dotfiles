@@ -38,6 +38,7 @@
     "serverless": "*",
     "typescript": "*",
     "uglify-js": "*",
+    "underscore-cli": "*",
     "yo": "*"
   }
 }
