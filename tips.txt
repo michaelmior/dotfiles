@@ -28,3 +28,7 @@ tokei enables fast counting of lines of source code
 fkill interactively searches for processes to kill
 glip= will align text in the current paragraph around the = sign
 1gLip, aligns everything after the first , in a separate column
+sbt eclipse will generate an eclipse project file
+sbt dependencyTree shows all dependencies of the current project
+sbt scalastyle checks the style of Scala projects
+sbt dependencyUpdates shows outdated dependencies
