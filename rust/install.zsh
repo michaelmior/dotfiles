@@ -11,6 +11,7 @@ function rust_install {
 }
 
 rust_install cargo-edit cargo-add
+rust_install hyperfine hyperfine
 rust_install ripgrep rg
 rust_install tokei tokei
 rust_install xsv xsv
