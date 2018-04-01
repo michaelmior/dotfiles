@@ -16,6 +16,7 @@ zgen oh-my-zsh plugins/sudo
 
 zgen oh-my-zsh themes/muse
 
+zgen load zsh-users/zsh-autosuggestions
 zgen load zsh-users/zsh-syntax-highlighting
 zgen load zsh-users/zsh-completions src
 zgen load micha/resty
