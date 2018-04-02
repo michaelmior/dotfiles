@@ -14,9 +14,9 @@ plugin_install git://github.com/pyenv/pyenv-update.git pyenv-update
 pyenv update
 pyenv doctor || return 1
 
-pyenv install -s 2.7.11
+pyenv install -s 2.7.14
 pyenv install -s 3.6.0
-pyenv global 2.7.11
+pyenv global 2.7.14
 
 export PIP_CONFIG_FILE=~/.dotfiles/python/pip.conf
 export VIRTUALENV_QUIET=1
