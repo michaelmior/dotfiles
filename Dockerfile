@@ -33,6 +33,7 @@ RUN apt-get -qq update && \
       openssl \
       php-cli \
       python \
+      python-dev \
       racket \
       sudo \
       tmux \
