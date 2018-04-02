@@ -37,6 +37,8 @@ alias pbpaste='xclip -selection clipboard -o'
 function wd { dpkg -S $(readlink -f `which -a $1 | grep -E '^/' | head -1`) }
 unalias d
 alias dsm=docker-service-manager
+alias norg='gron --ungron'
+alias ungron='gron --ungron'
 
 setopt histignorespace
 

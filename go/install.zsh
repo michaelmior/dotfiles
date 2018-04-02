@@ -15,6 +15,7 @@ fi
 source ~/.gvm/scripts/gvm
 gvm use go1.10.1
 
+go get -u github.com/tomnomnom/gron
 go get -u github.com/ericchiang/pup
 go get -u github.com/ichinaski/pxl
 go get -u github.com/aykamko/tag
