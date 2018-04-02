@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+export DOTFILES_ROOT=$HOME/.dotfiles
+update_files=($DOTFILES_ROOT/*/update.zsh)
+
+for file in $update_files; do
+  $file
+done

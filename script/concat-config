@@ -19,7 +19,7 @@ do
 done
 
 # load everything but the path and completion files
-for file in ${${${config_files:#*/path.zsh}:#*/completion.zsh}:#*/install.zsh}
+for file in ${${${${config_files:#*/path.zsh}:#*/completion.zsh}:#*/install.zsh}:#*/update.zsh}
 do
     cat $file >> $DOTFILES_ROOT/init.zsh
     echo >> $DOTFILES_ROOT/init.zsh
