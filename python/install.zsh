@@ -15,7 +15,7 @@ pyenv update
 pyenv doctor || return 1
 
 pyenv install -s 2.7.14
-pyenv install -s 3.6.0
+pyenv install -s 3.6.4
 pyenv global 2.7.14
 
 export PIP_CONFIG_FILE=~/.dotfiles/python/pip.conf
