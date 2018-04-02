@@ -32,3 +32,4 @@ sbt eclipse will generate an eclipse project file
 sbt dependencyTree shows all dependencies of the current project
 sbt scalastyle checks the style of Scala projects
 sbt dependencyUpdates shows outdated dependencies
+hr creates a line separator
