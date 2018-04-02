@@ -35,6 +35,7 @@
     "rebase-editor": "*",
     "redux-cli": "*",
     "rnpm": "*",
+    "semver": "*",
     "serverless": "*",
     "typescript": "*",
     "uglify-js": "*",
