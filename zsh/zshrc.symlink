@@ -118,8 +118,11 @@ if (( $+commands[tag] )); then
   tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null }
 fi
 
+TAG_SEARCH_PROG=rg
+
 agl() { ag --group --color $* | less -R }
 jql () { jq -C . $* | less -R }
+rgl () { rg --color always --heading $* | less -R }
 
 # use .localrc for secret stuff you don't
 # want in your public, versioned repo.
