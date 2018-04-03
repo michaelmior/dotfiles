@@ -5,6 +5,7 @@ zgen oh-my-zsh
 
 zgen oh-my-zsh plugins/bundler
 zgen oh-my-zsh plugins/django
+zgen oh-my-zsh plugins/extract
 zgen oh-my-zsh plugins/go
 zgen oh-my-zsh plugins/grunt
 zgen oh-my-zsh plugins/nmap
