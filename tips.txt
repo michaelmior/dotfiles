@@ -35,3 +35,6 @@ sbt dependencyUpdates shows outdated dependencies
 hr creates a line separator
 piping to gron flattens JSON so it can be grepped, ungron reverses it
 Esc Esc adds sudo to the previous command
+the se text object in vim represents LaTeX environments
+tse toggles starred environments in vim
+]] in vim closes LaTeX environments
