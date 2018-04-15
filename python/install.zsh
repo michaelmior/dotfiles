@@ -22,6 +22,7 @@ export PIP_CONFIG_FILE=~/.dotfiles/python/pip.conf
 export VIRTUALENV_QUIET=1
 
 pip install --upgrade pip
+pip install --upgrade pdir
 pip install --upgrade virtualenv
 pip install --upgrade pipsi
 pip install --upgrade pipenv
