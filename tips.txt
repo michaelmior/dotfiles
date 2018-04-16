@@ -38,3 +38,6 @@ Esc Esc adds sudo to the previous command
 the se text object in vim represents LaTeX environments
 tse toggles starred environments in vim
 ]] in vim closes LaTeX environments
+cargo deb builds a Debian package from a crate
+cargo info show information on crates
+cargo outdated shows which crates have pending updates
