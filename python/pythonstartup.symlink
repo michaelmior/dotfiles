@@ -23,7 +23,8 @@ def save_history(history_path=history_path):
 if os.path.exists(history_path):
     readline.read_history_file(history_path)
 
+if sys.version_info.major == 2:
+    from pdir import pdir
+
 atexit.register(save_history)
 del os, atexit, readline, rlcompleter, sys, save_history, history_path
-
-from pdir import pdir
