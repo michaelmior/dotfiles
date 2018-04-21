@@ -41,3 +41,4 @@ tse toggles starred environments in vim
 cargo deb builds a Debian package from a crate
 cargo info show information on crates
 cargo outdated shows which crates have pending updates
+\cs will bring up synonyms for the current word
