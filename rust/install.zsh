@@ -18,3 +18,5 @@ rust_install hyperfine hyperfine
 rust_install ripgrep rg
 rust_install tokei tokei
 rust_install xsv xsv
+
+python link-manpages.py
