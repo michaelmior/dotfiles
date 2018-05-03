@@ -21,6 +21,7 @@ zgen load zsh-users/zsh-autosuggestions
 zgen load zsh-users/zsh-syntax-highlighting
 zgen load zsh-users/zsh-completions src
 zgen load micha/resty
+zgen load Tarrasch/zsh-bd
 # zgen load psprint/zsh-editing-workbench
 
 rm -rf "$HOME/.zgen/local/dotfiles-plugin-master"
