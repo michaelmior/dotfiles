@@ -20,4 +20,4 @@ rust_install ripgrep rg
 rust_install tokei tokei
 rust_install xsv xsv
 
-python link-manpages.py
+python $(dirname $0:A)/link-manpages.py
