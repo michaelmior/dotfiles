@@ -126,6 +126,11 @@ agl() { ag --group --color $* | less -R }
 jql () { jq -C . $* | less -R }
 rgl () { rg --color always --heading $* | less -R }
 
+# Aliases for apt
+alias ai='sudo apt install'
+alias aps='apt search'
+alias adg='sudo apt update && sudo apt upgrade'
+
 # use .localrc for secret stuff you don't
 # want in your public, versioned repo.
 if [[ -a ~/.localrc ]]
