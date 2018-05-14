@@ -1,6 +1,8 @@
-0.13/java*
-0.13/templates
-0.13/staging
-0.13/plugins/target
-0.13/plugins/project/target
+*/java*
+*/templates
+*/staging
+*/plugins/target
+*/plugins/project/target
+*/target
+*/zinc
 boot/
