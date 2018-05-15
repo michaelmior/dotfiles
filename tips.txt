@@ -36,7 +36,7 @@ hr creates a line separator
 piping to gron flattens JSON so it can be grepped, ungron reverses it
 Esc Esc adds sudo to the previous command
 the se text object in vim represents LaTeX environments
-tse toggles starred environments in vim
+tse toggles starred environments for LaTeX in vim
 ]] in vim closes LaTeX environments
 cargo deb builds a Debian package from a crate
 cargo info show information on crates
