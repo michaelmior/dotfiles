@@ -7,6 +7,7 @@ RUN apt-get -qq update && \
       autoconf \
       build-essential \
       bison \
+      cmake \
       editorconfig \
       flex \
       cabal-install \
@@ -32,11 +33,13 @@ RUN apt-get -qq update && \
       opam \
       openssl \
       php-cli \
+      pv \
       python \
       python-dev \
       racket \
       sudo \
       tmux \
+      xclip \
       vim-nox \
       wget \
       zlib1g-dev \
