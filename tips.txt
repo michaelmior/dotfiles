@@ -39,6 +39,6 @@ the se text object in vim represents LaTeX environments
 tse toggles starred environments for LaTeX in vim
 ]] in vim closes LaTeX environments
 cargo deb builds a Debian package from a crate
-cargo info show information on crates
+cargo info shows information on crates
 cargo outdated shows which crates have pending updates
 \cs will bring up synonyms for the current word
