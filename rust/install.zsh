@@ -4,6 +4,7 @@ else
   curl https://sh.rustup.rs -sSf -m 60 | sh -s -- --no-modify-path -y -v
 fi
 
+~/.cargo/bin/rustup toolchain install nightly
 ~/.cargo/bin/rustup update
 
 function rust_install {
