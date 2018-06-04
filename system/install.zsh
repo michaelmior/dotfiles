@@ -1,4 +1,5 @@
 # Install ShadowFox
+>&2 echo "Installing ShadowFox..."
 profile_directory=$(find ~/.mozilla/firefox -maxdepth 1 -name '*.default' 2> /dev/null | head -1)
 
 if [ ! -z $profile_directory ]; then
