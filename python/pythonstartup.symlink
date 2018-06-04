@@ -24,7 +24,10 @@ if os.path.exists(history_path):
     readline.read_history_file(history_path)
 
 if sys.version_info.major == 2:
-    from pdir import pdir
+    try:
+        from pdir import pdir
+    except ImportError:
+        pass
 
 atexit.register(save_history)
 del os, atexit, readline, rlcompleter, sys, save_history, history_path
