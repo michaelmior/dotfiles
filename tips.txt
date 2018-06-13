@@ -42,3 +42,4 @@ cargo deb builds a Debian package from a crate
 cargo info shows information on crates
 cargo outdated shows which crates have pending updates
 \cs will bring up synonyms for the current word
+C-v/C-x in fzf in vim will open a new (vertical) split
