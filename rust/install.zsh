@@ -16,6 +16,7 @@ rust_install cargo-deb cargo-deb
 rust_install cargo-edit cargo-add
 rust_install cargo-info cargo-info
 rust_install cargo-outdated cargo-outdated
+rust_install cargo-update cargo-install-update
 rust_install fd-find fd
 rust_install hyperfine hyperfine
 rust_install miniserve miniserve
@@ -23,5 +24,7 @@ rust_install ripgrep rg
 rust_install shellharden shellharden
 rust_install tokei tokei
 rust_install xsv xsv
+
+rustup run nightly cargo install-update --all
 
 python $(dirname $0:A)/link-manpages.py
