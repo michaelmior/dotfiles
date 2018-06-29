@@ -19,6 +19,7 @@ rust_install cargo-outdated cargo-outdated
 rust_install cargo-install-update cargo-install-update
 rust_install fd-find fd
 rust_install hyperfine hyperfine
+rust_install loop loop-rs
 rust_install miniserve miniserve
 rust_install ripgrep rg
 rust_install shellharden shellharden
