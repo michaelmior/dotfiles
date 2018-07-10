@@ -39,6 +39,7 @@ pipsi_install csvkit csvkit
 pipsi_install http-prompt http-prompt
 pipsi_install httpie httpie
 pipsi_install httpstat httpstat
+pipsi_install omnihash omnihash
 pipsi_install pip-tools pip-tools
 pipsi_install pydf pydf
 pipsi_install Pygments pygments
