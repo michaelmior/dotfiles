@@ -1,5 +1,6 @@
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.rvm/bin:$HOME/.rvm/rubies/default/bin:$PATH" # Add RVM to PATH for scripting
 rvm() {
+    unfunction rvm
     source "$HOME/.rvm/scripts/rvm"
     rvm "$@"
 }
