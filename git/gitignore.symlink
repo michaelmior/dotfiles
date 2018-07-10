@@ -5,6 +5,7 @@
 *.rej
 .DS_Store
 .agignore
+.tern-port
 
 # Virtualenv
 .Python
