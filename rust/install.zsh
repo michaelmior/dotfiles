@@ -1,7 +1,7 @@
 if which rustup > /dev/null; then
   rustup self update
 else
-  curl https://sh.rustup.rs -sSf -m 60 | sh -s -- --no-modify-path -y -v
+  curl https://sh.rustup.rs -sSf -m 60 | sh -s -- --no-modify-path -y -v --default-toolchain nightly
 fi
 
 ~/.cargo/bin/rustup -v toolchain install nightly
