@@ -28,6 +28,7 @@
 [submodule "system/even-better-ls"]
 	path = system/even-better-ls
 	url = https://github.com/illinoisjackson/even-better-ls.git
+	ignore = untracked
 [submodule "git/git-extra-commands"]
 	path = git/git-extra-commands
 	url = https://github.com/unixorn/git-extra-commands.git
