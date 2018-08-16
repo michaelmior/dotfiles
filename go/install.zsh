@@ -8,12 +8,12 @@ if [ ! -d ~/.gvm ]; then
 fi
 
 current_version=$(gvm list | grep '=>' | cut -d' ' -f2 )
-if [ "go10.1" != "$current_version" ]; then
-    gvm install go1.10.3.1 --prefer-binary
+if [ "go1.10.3" != "$current_version" ]; then
+    gvm install go1.10.3 --prefer-binary
 fi
 
 source ~/.gvm/scripts/gvm
-gvm use go1.10.3.1
+gvm use go1.10.3
 
 go get -u github.com/tomnomnom/gron
 go get -u github.com/ericchiang/pup

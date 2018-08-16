@@ -2,4 +2,4 @@ gvm() {
     source "$HOME/.gvm/scripts/gvm"
     gvm "$@"
 }
-. "$HOME/.gvm/environments/go1.10.1"
+. "$HOME/.gvm/environments/go1.10.3"
