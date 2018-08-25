@@ -36,5 +36,6 @@ done
 colors=$(python $DOTFILES_ROOT/system/even-better-ls/ls_colors_generator.py)
 
 echo "LS_COLORS='$colors'" >> $DOTFILES_ROOT/init.zsh
+echo "export LS_COLORS" >> $DOTFILES_ROOT/init.zsh
 
 unset config_files
