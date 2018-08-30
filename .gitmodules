@@ -32,3 +32,6 @@
 [submodule "git/git-extra-commands"]
 	path = git/git-extra-commands
 	url = https://github.com/unixorn/git-extra-commands.git
+[submodule "system/prettyping"]
+	path = system/prettyping
+	url = git@github.com:denilsonsa/prettyping.git
