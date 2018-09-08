@@ -16,7 +16,7 @@ rust_install cargo-deb cargo-deb
 rust_install cargo-edit cargo-add
 rust_install cargo-info cargo-info
 rust_install cargo-outdated cargo-outdated
-rust_install cargo-install-update cargo-install-update
+rust_install cargo-install-update cargo-update
 rust_install fd-find fd
 rust_install hyperfine hyperfine
 rust_install loop loop-rs
