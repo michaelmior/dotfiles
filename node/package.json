@@ -4,6 +4,7 @@
   "description": "npm scripts to install for me by default",
   "repository": "https://github.com/michaelmior/dotfiles",
   "dependencies": {
+    "@storybook/cli": "*",
     "babel-cli": "*",
     "babel-eslint": "*",
     "bower": "*",
