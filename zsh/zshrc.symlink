@@ -135,7 +135,7 @@ rgl () { rg --color always --heading $* | less -R }
 
 orig_tree=$(which tree)
 tree () {
-  ignore=$(grep -hvEs '^$|^#' {~/,,$(git rev-parse --show-toplevel)/}.gitignore|tr \\n '\|'|sed 's_/|_|_g')
+  ignore=$(grep -hvEs '^$|^#' {~/,,$(git rev-parse --show-toplevel)/}.gitignore|tr \\n '\|'|sed 's_/\?|/\?_|_g')
   $orig_tree -I $ignore $*
 }
 
