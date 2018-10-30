@@ -32,8 +32,11 @@ export PROMPT="$HOST_SYMBOL${HOST_SYMBOL:+ }$PROMPT"
 alias e="exec_scmb_expand_args $EDITOR"
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+if [ command -v xclip &> /dev/null ]; then
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
+fi
+
 function wd { dpkg -S $(readlink -f `which -a $1 | grep -E '^/' | head -1`) }
 unalias d
 alias dsm=docker-service-manager
