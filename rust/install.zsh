@@ -22,6 +22,7 @@ rust_install hyperfine hyperfine
 rust_install loop loop-rs
 rust_install miniserve miniserve
 rust_install ripgrep rg
+rust_install sd sd
 rust_install shellharden shellharden
 rust_install tokei tokei
 rust_install xsv xsv
