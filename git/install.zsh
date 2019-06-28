@@ -6,13 +6,13 @@ if ! [ -f git/gitconfig.symlink ]; then
 
     git_authorname=$GIT_AUTHOR_NAME
     if [ -z "$GIT_AUTHOR_NAME" ]; then
-        user ' - What is your github author name?'
+        echo ' - What is your github author name?'
         read -e git_authorname
     fi
 
     git_authoremail=$GIT_AUTHOR_EMAIL
     if [ -z "$GIT_AUTHOR_EMAIL" ]; then
-        user ' - What is your github author email?'
+        echo ' - What is your github author email?'
         read -e git_authoremail
     fi
 
