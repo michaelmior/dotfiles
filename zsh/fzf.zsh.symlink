@@ -1,22 +1,22 @@
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == */home/mmior/.dotfiles/zsh/fzf.symlink/bin* ]]; then
-  export PATH="$PATH:/home/mmior/.dotfiles/zsh/fzf.symlink/bin"
+if [[ ! "$PATH" == *$HOME/.dotfiles/zsh/fzf.symlink/bin* ]]; then
+  export PATH="$PATH:$HOME/.dotfiles/zsh/fzf.symlink/bin"
 fi
 
 # Man path
 # --------
-if [[ ! "$MANPATH" == */home/mmior/.dotfiles/zsh/fzf.symlink/man* && -d "/home/mmior/.dotfiles/zsh/fzf.symlink/man" ]]; then
-  export MANPATH="$MANPATH:/home/mmior/.dotfiles/zsh/fzf.symlink/man"
+if [[ ! "$MANPATH" == *$HOME/.dotfiles/zsh/fzf.symlink/man* && -d "$HOME/.dotfiles/zsh/fzf.symlink/man" ]]; then
+  export MANPATH="$MANPATH:$HOME/.dotfiles/zsh/fzf.symlink/man"
 fi
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/home/mmior/.dotfiles/zsh/fzf.symlink/shell/completion.zsh" 2> /dev/null
+[[ $- == *i* ]] && source "$HOME/.dotfiles/zsh/fzf.symlink/shell/completion.zsh" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/home/mmior/.dotfiles/zsh/fzf.symlink/shell/key-bindings.zsh"
+source "$HOME/.dotfiles/zsh/fzf.symlink/shell/key-bindings.zsh"
 
 fzf-edit() {
   fzf-file-widget 1
