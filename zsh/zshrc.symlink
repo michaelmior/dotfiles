@@ -42,7 +42,6 @@ if [ command -v xclip &> /dev/null ]; then
 fi
 
 function wd { dpkg -S $(readlink -f `which -a $1 | grep -E '^/' | head -1`) }
-unalias d 2>/dev/null
 alias dsm=docker-service-manager
 alias norg='gron --ungron'
 alias ungron='gron --ungron'
