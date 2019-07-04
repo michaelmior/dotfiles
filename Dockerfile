@@ -36,6 +36,7 @@ RUN apt-get -qq update && \
       pv \
       python \
       python-dev \
+      r-base \
       racket \
       sudo \
       tmux \
