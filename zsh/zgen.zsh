@@ -23,6 +23,7 @@ zgen load zsh-users/zsh-completions src
 zgen load micha/resty
 zgen load Tarrasch/zsh-bd
 # zgen load psprint/zsh-editing-workbench
+zgen load knu/zsh-git-escape-magic git-escape-magic
 
 rm -rf "$HOME/.zgen/local/dotfiles-plugin-master"
 (cd "$HOME/.dotfiles/zsh/dotfiles-plugin"; rm -rf .git; git init; git add .; git commit -am Init)
