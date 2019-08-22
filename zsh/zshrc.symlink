@@ -18,6 +18,10 @@ export PATH=~/bin:~/.local/bin:$PATH
 # OPAM configuration
 [ -x /usr/bin/opam ] && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null
 
+# Load url-quote-magic
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
+
 DISABLE_UPDATE_PROMPT="true"
 COMPLETION_WAITING_DOTS="true"
 PROJECT_PATHS=(~/apps)
