@@ -13,7 +13,7 @@ export EDITOR=vim
 
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
-export PATH=~/bin:~/.local/bin:$PATH
+export PATH="~/bin:~/.local/bin:$PATH"
 
 # OPAM configuration
 [ -x /usr/bin/opam ] && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null
@@ -181,4 +181,4 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 [ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$HOME/.rvm/bin:$PATH"
