@@ -4,9 +4,11 @@
   "description": "npm scripts to install for me by default",
   "repository": "https://github.com/michaelmior/dotfiles",
   "dependencies": {
+    "@babel/core": "*",
+    "@babel/node": "*",
+    "@sentry/cli": "^1.50.0",
     "@storybook/cli": "*",
-    "babel-cli": "*",
-    "babel-eslint": "*",
+    "alex": "*",
     "bower": "*",
     "casperjs": "*",
     "coffee-script": "*",
