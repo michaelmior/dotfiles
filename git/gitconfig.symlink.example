@@ -27,6 +27,9 @@
     tool = vimdiff
 [mergetool]
     keepBackup = false
+[merge "json"]
+    name = custom merge driver for json files
+    driver = git-json-merge %A %O %B
 [pull]
     rebase = true
 [push]

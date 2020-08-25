@@ -24,6 +24,7 @@
     "firebase-tools": "*",
     "fkill-cli": "*",
     "foundation-cli": "*",
+    "git-json-merge": "*",
     "grunt-cli": "*",
     "gulp": "*",
     "harp": "*",
