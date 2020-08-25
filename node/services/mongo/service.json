@@ -8,6 +8,6 @@
     "data": "/data/db"
   },
   "env": {
-      "TZ": "UTC"
+    "TZ": "UTC"
   }
 }

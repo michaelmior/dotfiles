@@ -1,10 +1,15 @@
 {
-  "tag": "postgres",
+  "tag": "postgres:alpine",
   "name": "postgres",
   "ports": [
     5432
   ],
   "mounts": {
     "data": "/var/lib/postgresql/data"
+  },
+  "env": {
+      "TZ": "UTC",
+      "POSTGRES_USER": "mmior",
+      "POSTGRES_PASSWORD": "postgres"
   }
 }
