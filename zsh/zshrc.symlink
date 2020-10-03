@@ -13,7 +13,7 @@ export EDITOR=vim
 
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
-export PATH="~/bin:~/.local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/bin:$PATH"
 
 # OPAM configuration
 [ -x /usr/bin/opam ] && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null
