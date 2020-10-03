@@ -18,7 +18,7 @@ for root, dirnames, filenames in os.walk(registry_path):
     # Get the crate name and version number
     crate_folder = root[len(registry_path):].split('/')[2]
     crate_split = crate_folder.split('-')
-    version = map(int, crate_split[-1].split('.'))
+    version = map(int, crate_split[-1].split('+')[0].split('.'))
     crate_name = ''.join(crate_split[:-1])
 
     # If we didn't do this already or we found a newer version, prepare to link
