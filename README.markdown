@@ -1,6 +1,6 @@
 ## dotfiles
 
-[![Build Status](https://travis-ci.org/michaelmior/dotfiles.svg?branch=master)](https://travis-ci.org/michaelmior/dotfiles)
+[![Build Status](https://travis-ci.com/michaelmior/dotfiles.svg?branch=master)](https://travis-ci.com/michaelmior/dotfiles)
 
 Your dotfiles are how you personalize your system. These are mine.
 
