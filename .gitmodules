@@ -6,7 +6,7 @@
 	url = https://github.com/scmbreeze/scm_breeze.git
 [submodule "python/pyenv.symlink"]
 	path = python/pyenv.symlink
-	url = git://github.com/yyuu/pyenv.git
+	url = https://github.com/yyuu/pyenv.git
 [submodule "tmux/tmux.symlink/plugins/tpm"]
 	path = tmux/tmux.symlink/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
@@ -31,4 +31,4 @@
 	url = https://github.com/unixorn/git-extra-commands.git
 [submodule "system/prettyping"]
 	path = system/prettyping
-	url = git@github.com:denilsonsa/prettyping.git
+	url = https://github.com/denilsonsa/prettyping.git
