@@ -35,11 +35,7 @@ pipx install csvkit
 pipx install http-prompt
 pipx install httpie
 pipx install httpstat
-pipx install omnihash
 pipx install pip-tools
-pipx install pydf
-pipx install Pygments
-pipx install shyaml
 
 unset PIP_CONFIG_FILE
 unset VIRTUALENV_QUIET
