@@ -2,7 +2,7 @@ INSTALLS=$(wildcard */install.zsh)
 
 all: $(INSTALLS)
 
-vim: go/install.zsh python/install.zsh
+vim: go/install.zsh node/install.zsh python/install.zsh
 
 %: %/install.zsh
 
