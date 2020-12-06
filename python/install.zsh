@@ -16,7 +16,7 @@ pyenv doctor || return 1
 
 pyenv install --skip-existing 2.7.18
 pyenv install --skip-existing 3.9.0
-pyenv global 2.7.18
+pyenv global 3.9.0
 
 export PIP_CONFIG_FILE=~/.dotfiles/python/pip.conf
 export VIRTUALENV_QUIET=1
@@ -30,11 +30,9 @@ pyenv pip-update
 pip install pathlib2==2.1.0 # for pipenv
 pyenv rehash
 
-pipx install cqlsh
 pipx install csvkit
 pipx install http-prompt
 pipx install httpie
-pipx install httpstat
 pipx install pip-tools
 
 unset PIP_CONFIG_FILE
