@@ -9,3 +9,6 @@ fi
 gem install -q \
     rubocop \
     travis
+
+source $HOME/.dotfiles/ruby/path.zsh
+source $HOME/.dotfiles/ruby/ruby.zsh

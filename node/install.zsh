@@ -11,3 +11,5 @@ npm install -g yarn --loglevel=warn
 npm set progress=true
 
 npm completion > $HOME/.dotfiles/node/completion.zsh
+
+source $HOME/.dotfiles/node/path.zsh

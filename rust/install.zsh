@@ -30,3 +30,5 @@ rust_install xsv xsv
 rustup run nightly cargo install-update --all
 
 python $(dirname $0:A)/link-manpages.py
+
+source $HOME/.dotfiles/rust/path.zsh

@@ -37,3 +37,6 @@ pipx install pip-tools
 
 unset PIP_CONFIG_FILE
 unset VIRTUALENV_QUIET
+
+source $HOME/.dotfiles/python/path.zsh
+source $HOME/.dotfiles/python/python.zsh

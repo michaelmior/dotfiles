@@ -15,3 +15,5 @@ else
   cp src/ls ~/bin
   popd
 fi
+
+source $HOME/.dotfiles/system/path.zsh
