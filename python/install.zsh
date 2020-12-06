@@ -24,26 +24,22 @@ export VIRTUALENV_QUIET=1
 pip install --upgrade pip
 pip install --upgrade pdir
 pip install --upgrade virtualenv
-pip install --upgrade pipsi
+pip install --upgrade pipx
 pip install --upgrade pipenv
 pyenv pip-update
 pip install pathlib2==2.1.0 # for pipenv
 pyenv rehash
 
-function pipsi_install {
-  [[ -d ~/.local/venvs/$2 ]] || pipsi --bin-dir=$HOME/bin install $1
-}
-
-pipsi_install cqlsh cqlsh
-pipsi_install csvkit csvkit
-pipsi_install http-prompt http-prompt
-pipsi_install httpie httpie
-pipsi_install httpstat httpstat
-pipsi_install omnihash omnihash
-pipsi_install pip-tools pip-tools
-pipsi_install pydf pydf
-pipsi_install Pygments pygments
-pipsi_install shyaml shyaml
+pipx install cqlsh
+pipx install csvkit
+pipx install http-prompt
+pipx install httpie
+pipx install httpstat
+pipx install omnihash
+pipx install pip-tools
+pipx install pydf
+pipx install Pygments
+pipx install shyaml
 
 unset PIP_CONFIG_FILE
 unset VIRTUALENV_QUIET
