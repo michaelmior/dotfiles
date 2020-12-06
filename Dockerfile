@@ -1,4 +1,4 @@
-FROM ubuntu:17.10
+FROM ubuntu:20.04
 MAINTAINER Michael Mior <michael.mior@gmail.com>
 
 ENV DEBIAN_FRONTEND=noninteractive
