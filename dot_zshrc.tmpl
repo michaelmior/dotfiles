@@ -1,0 +1,129 @@
+export PATH="$HOME/bin:$HOME/.bin:$HOME/.local/bin:$HOME/n/bin:/Library/TeX/texbin/:$PATH"
+
+# n (node version manager)
+export N_PREFIX="$HOME/n"
+
+# Set window title to current directory
+function set_win_title(){
+    echo -ne "\033]0; $(basename "$PWD") \007"
+}
+precmd_functions+=(set_win_title)
+
+# Starship
+eval "$(starship init zsh)"
+
+# SDKMAN
+export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+
+# Enable autocompletion
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# Enable iterm2 shell integration on macOS
+{{- if eq .chezmoi.os "darwin" }}
+source ~/.iterm2_shell_integration.zsh
+{{- end }}
+
+# SCM Breeze
+source "{{ .chezmoi.homeDir }}/.scm_breeze/scm_breeze.sh"
+
+# Perl
+PATH="{{ .chezmoi.homeDir }}/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="{{ .chezmoi.homeDir }}/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="{{ .chezmoi.homeDir }}/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"{{ .chezmoi.homeDir }}/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE={{ .chezmoi.homeDir }}/perl5"; export PERL_MM_OPT;
+
+{{- if eq .chezmoi.os "darwin" }}
+# macOS-specific Ruby config
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+{{- end }}
+
+{{- if eq .chezmoi.os "darwin" }}
+# macOS config for libpq
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
+{{- end }}
+
+# Aliases
+export EDITOR=nvim
+alias vim=nvim
+alias gl="git log"
+alias ga="git add"
+alias gd="git diff"
+alias gp="git push"
+alias gdc="git diff --cached"
+alias grb="git rebase"
+alias grbi="git rebase --interactive"
+alias grhh="git reset --hard HEAD"
+jql () { jq -C . $* | less -R }
+rgl () { rg --color always --heading $* | less -R }
+
+# Configure TTY for gpg
+export GPG_TTY=$(tty)
+
+# bun
+[ -s "{{ .chezmoi.homeDir }}/.bun/_bun" ] && source "{{ .chezmoi.homeDir }}/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+if type brew &>/dev/null; then
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
+
+autoload -Uz git-escape-magic
+git-escape-magic
+
+{{- if eq .chezmoi.os "darwin" }}
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+{{- end }}
+
+# Add fzf
+export FZF_DEFAULT_COMMAND='fd --type f ""'
+export FZF_CTRL_T_COMMAND='fd --type f ""'
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+zle     -N   fzf-file-widget
+bindkey '^P' fzf-file-widget
+
+fzf-edit() {
+  fzf-file-widget 1
+  [[ -z $BUFFER ]] && return
+  zle beginning-of-line
+  LBUFFER="vim "
+  zle accept-line
+}
+zle     -N   fzf-edit
+bindkey '^T' fzf-edit
+
+# Krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Atuin
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
+
+{{- if eq .chezmoi.os "darwin" }}
+# pnpm
+export PNPM_HOME="/Users/mjmvcs/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+{{- end }}
