@@ -1,0 +1,24 @@
+[user]
+    name = Michael Mior
+    email = michael.mior@gmail.com
+    signingkey = D8D72C13CF2D8DDB
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+    pager = delta
+[commit]
+    gpgsign = true
+[gpg]
+    program = gpg
+[init]
+    defaultBranch = main
+[pull]
+    rebase = true
+[delta]
+    navigate = true
+    light = false
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
