@@ -1,0 +1,36 @@
+#!/bin/bash
+rustup default stable
+rustup toolchain install nightly
+
+export PATH="$HOME/.rustup/toolchains/$(rustup toolchain list | grep default | cut -d' ' -f1)/bin/:$PATH"
+cargo install cargo-binstall
+
+export BINSTALL_NO_CONFIRM=true
+cargo binstall cargo
+cargo binstall cargo-audit
+cargo binstall cargo-deny
+cargo binstall cargo-edit
+cargo binstall cargo-update
+cargo binstall datafusion-cli
+cargo binstall fd-find
+cargo binstall git-absorb
+cargo binstall git-delta
+cargo binstall gn
+cargo binstall histo
+cargo binstall mdcat
+cargo binstall mergiraf
+cargo binstall miniserve
+cargo binstall pipe-rename
+cargo binstall ripgrep
+cargo binstall starship
+cargo binstall tokei
+cargo binstall xsv
+cargo binstall zizmor
+
+# Linux-specific packages
+{{- if eq .chezmoi.os "linux" }}
+cargo binstall cargo-acl
+{{- end }}
+
+# uv
+cargo install --git https://github.com/astral-sh/uv uv

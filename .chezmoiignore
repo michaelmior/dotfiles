@@ -15,6 +15,17 @@ apps
 
 .ssh
 
+# Rust
+.cargo/.crates.toml
+.cargo/.crates2.json
+.cargo/.global-cache
+.cargo/.package-cache
+.cargo/.package-cache-mutate
+.cargo/bin
+.cargo/binstall
+.cargo/env
+.cargo/registry
+
 # Elan
 .elan/tmp
 .elan/toolchains
@@ -36,7 +47,6 @@ apps
 .bun
 .bundle
 .cache
-.cargo
 .claude
 .codemod
 .cpan
