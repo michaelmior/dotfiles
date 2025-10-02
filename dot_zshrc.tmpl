@@ -118,6 +118,11 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
 {{- if eq .chezmoi.os "darwin" }}
 # pnpm
 export PNPM_HOME="/Users/mjmvcs/Library/pnpm"
