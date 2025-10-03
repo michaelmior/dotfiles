@@ -3,6 +3,11 @@
     url = "https://iterm2.com/shell_integration/zsh"
     refreshPeriod = "168h"
 
+[".config/nvim"]
+    type = "git-repo"
+    url = "git@github.com:michaelmior/nvimrc.git"
+    refreshPeriod = "1h"
+
 {{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64")) -}}
 ["bin/mise"]
     type = "file"
