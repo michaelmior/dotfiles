@@ -12,6 +12,7 @@ Postman
 Public
 
 apps
+bin/mise
 
 .ssh
 

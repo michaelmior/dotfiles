@@ -1,8 +1,8 @@
 #!/bin/bash
-rustup default stable
-rustup toolchain install nightly
 
-export PATH="$HOME/.rustup/toolchains/$(rustup toolchain list | grep default | cut -d' ' -f1)/bin/:$PATH"
+eval "$(mise activate bash)"
+mise use -g rust
+
 cargo install cargo-binstall
 
 export BINSTALL_NO_CONFIRM=true
@@ -34,4 +34,11 @@ cargo binstall cargo-acl
 {{- end }}
 
 # uv
-cargo install --git https://github.com/astral-sh/uv uv
+mise use -g uv
+
+uv tool install black
+uv tool install huggingface-hub
+uv tool install jpterm
+uv tool install nbconvert
+uv tool install nbpreview
+uv tool install parquet-tools
