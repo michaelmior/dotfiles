@@ -1,10 +1,10 @@
 export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/.bin:$HOME/.local/bin:$HOME/n/bin:/Library/TeX/texbin/:$PATH"
 
 # Remove / from WORDCHARS to consider path parts as words
-WORDCHARS=${WORDCHARS/\/}
+export WORDCHARS=${WORDCHARS/\/}
 
 # Set default less options
-LESS=FSRX
+export LESS=FSRX
 
 # n (node version manager)
 export N_PREFIX="$HOME/n"
