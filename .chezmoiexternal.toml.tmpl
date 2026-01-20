@@ -11,7 +11,7 @@
 {{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64")) -}}
 ["bin/mise"]
     type = "file"
-    url = "https://github.com/jdx/mise/releases/download/v2025.10.0/mise-v{{ now | date "2006.01" }}.0-macos-arm64"
+    url = "https://github.com/jdx/mise/releases/download/v2026.1.5/mise-v2026.1.5-macos-arm64"
     executable = true
     refreshPeriod = "168h"
 {{- end -}}
@@ -19,7 +19,7 @@
 {{ if (and (eq .chezmoi.os "linux") (eq .chezmoi.arch "x64")) -}}
 ["bin/mise"]
     type = "file"
-    url = "https://github.com/jdx/mise/releases/download/v2025.10.0/mise-v{{ now | date "2006.01" }}.0-linux-x64"
+    url = "https://github.com/jdx/mise/releases/download/v2026.1.5/mise-v2026.1.5-linux-x64"
     executable = true
     refreshPeriod = "168h"
 {{- end -}}
