@@ -39,9 +39,6 @@ path=(
 )
 {{- end }}
 
-# SCM Breeze
-source "{{ .chezmoi.homeDir }}/.scm_breeze/scm_breeze.sh"
-
 # Perl
 PATH="{{ .chezmoi.homeDir }}/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="{{ .chezmoi.homeDir }}/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
