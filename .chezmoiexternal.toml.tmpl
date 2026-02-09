@@ -8,6 +8,11 @@
     url = "git@github.com:michaelmior/nvimrc.git"
     refreshPeriod = "1h"
 
+[".pyenv"]
+    type = "git-repo"
+    url = "git@github.com:pyenv/pyenv.git"
+    refreshPeriod = "1h"
+
 {{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64")) -}}
 ["bin/mise"]
     type = "file"
