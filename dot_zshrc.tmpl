@@ -29,6 +29,14 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # Enable iterm2 shell integration on macOS
 {{- if eq .chezmoi.os "darwin" }}
 source ~/.iterm2_shell_integration.zsh
+
+# Use GNU tools without prefix
+path=(
+  /opt/homebrew/bin
+  /opt/homebrew/opt/coreutils/libexec/gnubin
+  /opt/homebrew/opt/grep/libexec/gnubin
+  $path
+)
 {{- end }}
 
 # SCM Breeze
