@@ -13,6 +13,11 @@
     url = "git@github.com:pyenv/pyenv.git"
     refreshPeriod = "1h"
 
+[".zsh-functions/git-escape-magic"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/knu/zsh-git-escape-magic/refs/heads/main/git-escape-magic"
+    refreshPeriod = "168h"
+
 {{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64")) -}}
 ["bin/mise"]
     type = "file"
