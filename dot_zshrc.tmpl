@@ -151,3 +151,6 @@ esac
 # Mise
 eval "$(mise activate zsh)"
 mise use -g uv &> /dev/null
+
+# Allow local overrides and extra settings
+[[ -f ~/.localrc ]] && source ~/.localrc
