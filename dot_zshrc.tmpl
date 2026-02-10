@@ -26,8 +26,9 @@ export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-# Enable iterm2 shell integration on macOS
 {{- if eq .chezmoi.os "darwin" }}
+
+# Enable iterm2 shell integration on macOS
 source ~/.iterm2_shell_integration.zsh
 
 # Use GNU tools without prefix
