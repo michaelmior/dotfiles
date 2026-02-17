@@ -105,6 +105,7 @@ source <(carapace _carapace)
 
 # Custom functions
 fpath+=(~/.zsh-functions)
+autoload -Uz compinit && compinit
 autoload -Uz git-escape-magic
 git-escape-magic
 
@@ -112,7 +113,9 @@ git-escape-magic
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 {{- end }}
 
-# Add fzf
+# fzf
+source <(fzf --zsh)
+
 export FZF_DEFAULT_COMMAND='fd --type f ""'
 export FZF_CTRL_T_COMMAND='fd --type f ""'
 export FZF_CTRL_T_OPTS="
@@ -156,9 +159,6 @@ esac
 # Mise
 eval "$(mise activate zsh)"
 mise use -g uv &> /dev/null
-
-# fzf
-source <(fzf --zsh)
 
 # Allow local overrides and extra settings
 [[ -f ~/.localrc ]] && source ~/.localrc
