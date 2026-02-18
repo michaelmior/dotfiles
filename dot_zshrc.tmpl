@@ -138,6 +138,9 @@ fzf-edit() {
 zle     -N   fzf-edit
 bindkey '^T' fzf-edit
 
+# Vim mode
+bindkey -v
+
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
