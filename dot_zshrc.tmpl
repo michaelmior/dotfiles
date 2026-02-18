@@ -126,8 +126,8 @@ export FZF_CTRL_T_OPTS="
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 zle     -N   fzf-file-widget
-bindkey '^P' fzf-file-widget
-bindkey '^O' fzf-cd-widget
+bindkey -M viins '^P' fzf-file-widget
+bindkey -M viins '^O' fzf-cd-widget
 
 fzf-edit() {
   fzf-file-widget 1
@@ -137,7 +137,7 @@ fzf-edit() {
   zle accept-line
 }
 zle     -N   fzf-edit
-bindkey '^T' fzf-edit
+bindkey -M viins '^T' fzf-edit
 
 # Vim mode
 bindkey -v
