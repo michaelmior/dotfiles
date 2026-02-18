@@ -166,5 +166,29 @@ esac
 eval "$(mise activate zsh)"
 mise use -g uv &> /dev/null
 
+# Add command to quickly start or reattach to a tmux session by name
+tm() {
+    if [ -z $1 ]; then
+        tmux list-sessions
+        return
+    fi
+    tmux detach -s $1 2> /dev/null
+    if [ -n "${TMUX+1}" ]; then
+        tmux switch-client -t $1 2> /dev/null || tmux new-session -s $1
+    else
+        tmux attach-session -t $1 2> /dev/null || tmux new-session -s $1
+    fi
+}
+
+_tm() {
+  local word completions
+  word="$1"
+  sessions=`tmux list-sessions 2> /dev/null`
+  [ $? -ne 0 ] && return
+  completions=`echo "$sessions" | cut -d ':' -f1`
+  reply=( "${(f)completions}" )
+}
+compctl -K _tm tm
+
 # Allow local overrides and extra settings
 [[ -f ~/.localrc ]] && source ~/.localrc
