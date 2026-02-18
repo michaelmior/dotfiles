@@ -5,7 +5,7 @@
 add_newline = false
 
 right_format = "$time"
-format = '$all '
+format = '$all'
 
 [time]
 disabled = false
@@ -14,3 +14,7 @@ format = "[$time]($style)"
 
 [line_break]
 disabled = true
+
+[gcloud]
+format = 'on [$symbol$project]($style) '
+symbol = '🌥️ '
