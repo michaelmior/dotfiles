@@ -127,6 +127,7 @@ export FZF_CTRL_T_OPTS="
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 zle     -N   fzf-file-widget
 bindkey '^P' fzf-file-widget
+bindkey '^O' fzf-cd-widget
 
 fzf-edit() {
   fzf-file-widget 1
