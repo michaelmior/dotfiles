@@ -18,6 +18,11 @@
     url = "https://raw.githubusercontent.com/knu/zsh-git-escape-magic/refs/heads/main/git-escape-magic"
     refreshPeriod = "168h"
 
+[".zsh-functions/zsh-vim-mode"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/softmoth/zsh-vim-mode/refs/heads/main/zsh-vim-mode.plugin.zsh"
+    refreshPeriod = "168h"
+
 {{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64")) -}}
 ["bin/mise"]
     type = "file"
