@@ -139,6 +139,19 @@ fzf-edit() {
 zle     -N   fzf-edit
 bindkey -M viins '^T' fzf-edit
 
+# Add a binding to cd relative the root of the current git repo
+fzf-cd-gitroot () {
+  local base
+  base=$(git rev-parse --show-toplevel 2>/dev/null) || base=$PWD
+
+  builtin pushd "$base" >/dev/null || return
+  fzf-cd-widget
+  builtin popd >/dev/null
+}
+
+zle -N fzf-cd-gitroot
+bindkey -M viins '^G' fzf-cd-gitroot
+
 # Vim mode
 bindkey -v
 source ~/.zsh-functions/zsh-vim-mode
