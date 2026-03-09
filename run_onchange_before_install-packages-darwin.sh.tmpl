@@ -1,7 +1,7 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
-brew bundle --file=/dev/stdin <<EOF
+brew bundle --verbose --file=/dev/stdin <<EOF
 tap "buildpack/tap"
 tap "derailed/k9s"
 tap "hashicorp/tap"
