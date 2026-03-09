@@ -1,47 +1,48 @@
 #!/bin/bash
 
+mkdir -p ~/.zsh-functions
+
 eval "$(mise activate bash)"
 mise use -g rust
 
 cargo install cargo-binstall
 
 export BINSTALL_NO_CONFIRM=true
-cargo binstall atuin
-cargo binstall bat
-cargo binstall cargo
-cargo binstall cargo-audit
-cargo binstall cargo-deny
-cargo binstall cargo-edit
-cargo binstall cargo-update
-cargo binstall datafusion-cli
-cargo binstall dts
-cargo binstall fd-find
-cargo binstall git-absorb
-cargo binstall git-delta
-cargo binstall gn
-cargo binstall histo
-cargo binstall mdcat
-cargo binstall mergiraf
-cargo binstall miniserve
-cargo binstall pipe-rename
-cargo binstall prek
-cargo binstall ripgrep
-cargo binstall starship
-cargo binstall tokei
-cargo binstall xsv
-cargo binstall zizmor
+cargo binstall -y \
+    atuin \
+    bat \
+    cargo \
+    cargo-audit \
+    cargo-deny \
+    cargo-edit \
+    cargo-update \
+    datafusion-cli \
+    dts \
+    fd-find \
+    git-absorb \
+    git-delta \
+    gn \
+    histo \
+    mdcat \
+    mergiraf \
+    miniserve \
+    pipe-rename \
+    prek \
+    ripgrep \
+    starship \
+    tokei \
+    xsv \
+    zizmor
+
+bat --completion zsh > ~/.zsh-functions/_bat
+dts --generate-completion zsh > ~/.zsh-functions/_dts
+mdcat --completions zsh > ~/.zsh-functions/_mdcat
+miniserve --print-completions zsh > ~/.zsh-functions/_miniserve
+rg --generate=complete-zsh > ~/.zsh-functions/_rg
+starship completions zsh > ~/.zsh-functions/_starship
+zizmor --completions zsh > ~/.zsh-functions/_zizmor
 
 # Linux-specific packages
 {{- if eq .chezmoi.os "linux" }}
 cargo binstall cargo-acl
 {{- end }}
-
-# uv
-mise use -g uv
-
-uv tool install black
-uv tool install huggingface-hub
-uv tool install jpterm
-uv tool install nbconvert
-uv tool install nbpreview
-uv tool install parquet-tools
