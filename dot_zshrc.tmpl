@@ -121,6 +121,11 @@ git-escape-magic
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 {{- end }}
 
+# cd to git root
+cdg() {
+  cd $(git rev-parse --show-toplevel 2>/dev/null)
+}
+
 # fzf
 source <(fzf --zsh)
 
@@ -144,6 +149,19 @@ fzf-edit() {
 zle     -N   fzf-edit
 bindkey -M viins '^T' fzf-edit
 
+# Add a binding to edit relative the root of the current git repo
+fzf-edit-gitroot() {
+  local base
+  base=$(git rev-parse --show-toplevel 2>/dev/null) || base=$PWD
+
+  builtin pushd "$base" >/dev/null || return
+  fzf-edit
+  builtin popd >/dev/null
+}
+zle     -N   fzf-edit-gitroot
+bindkey -M viins '^[[116;6u' fzf-edit-gitroot
+
+
 # Add a binding to cd relative the root of the current git repo
 fzf-cd-gitroot () {
   local base
@@ -156,6 +174,19 @@ fzf-cd-gitroot () {
 
 zle -N fzf-cd-gitroot
 bindkey -M viins '^G' fzf-cd-gitroot
+
+# Add a binding to open files relative the root of the current git repo
+fzf-file-gitroot () {
+  local base
+  base=$(git rev-parse --show-toplevel 2>/dev/null) || base=$PWD
+
+  builtin pushd "$base" >/dev/null || return
+  fzf-file-widget 1
+  builtin popd >/dev/null
+}
+
+zle -N fzf-file-gitroot
+bindkey -M viins '^[[112;6u' fzf-file-gitroot
 
 # Vim mode
 bindkey -v
